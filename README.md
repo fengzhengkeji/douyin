@@ -4,14 +4,13 @@
 
 通过抖音通信协议实现自动化爬取抖音视频，批量注册登录，点赞，评论, 视频下载上传等功能
 
-抖音通信协议采用抖音 iOS 2.0.0版本协议，提供生成iOS设备信息功能，方便调用协议
+抖音通信协议支持抖音 iOS 2.0.0 - 2.6.0（最新） 版本协议，提供生成iOS设备信息功能，方便调用协议
 
 提供生成签名服务，方便对抖音通信协议进行签名。签名参数: `as`, `mas`, `ts`
 
 项目持续更新中...
 
 ## 使用说明
-
 通过调用API加签服务来完成获取新的设备信息及协议签名。
 
 实现过程:
@@ -78,6 +77,40 @@ https://api.appsign.vip:2688/sign
     "success":true
 }
 ```
+
+## APP版本信息
+针对不同版本的抖音，可以使用如下版本信息：
+```
+APPINFO = {
+    "version_code": "2.0.0",
+    "channel": "pp",
+    "app_name": "aweme",
+    "build_number": "20005",
+    "app_version": "2.0.0",
+    "aid": "1128",
+}
+
+APPINFO = {
+    "version_code": "2.5.1",
+    "channel": "App%20Store",
+    "app_name": "aweme",
+    "build_number": "25105",
+    "app_version": "2.5.1",
+    "aid": "1128",
+}
+
+APPINFO = {
+    "version_code": "2.6.0",
+    "channel": "App%20Store",
+    "app_name": "aweme",
+    "build_number": "26006",
+    "app_version": "2.6.0",
+    "aid": "1128",
+}
+
+等其他
+```
+
 
 ## 实例
 
